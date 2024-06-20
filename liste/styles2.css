@@ -1,0 +1,405 @@
+/* Global styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #a6e2c0; /* Light green background */
+  }
+  
+  .main-content {
+    margin: 15px auto;
+    max-width: 1000px;
+    background-color: #a6e2c0; /* Light green background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(12, 5, 5, 0.1);
+  }
+  
+  /* Header styles */
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f9fa; /* Light grey background */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rounded-logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px; /* Rounded corners for logo */
+    object-fit: cover;
+  }
+  
+  .navbar {
+    flex-grow: 1;
+    padding-left: 20px;
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .navbar .nav-link {
+    color: #333; /* Text color */
+    font-size: 1.2rem; /* Font size */
+    padding: 0.5rem 1rem; /* Padding */
+  }
+  
+  .navbar .nav-link:hover {
+    color: #0056b3; /* Text color on hover */
+    border-bottom: 2px solid #0056b3; /* Border on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar .nav-link {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  /* Title animation */
+  .h1-container {
+    text-align: center;
+    animation: titel 2s;
+  }
+  
+  @keyframes titel {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Section title styles */
+  .h2-container {
+    text-align: center;
+    margin: 20px; /* Adjust margins as needed */
+  }
+  
+  .h2-container h2 {
+    font-size: 25px; /* Adjust font size */
+    color: #333; /* Text color */
+  }
+  
+  .separator-line {
+    width: 100%;
+    height: 3px; /* Thickness of the separator */
+    background-color: #080505; /* Dark background color */
+    margin: 10px 0; /* Margin above and below the separator */
+  }
+  
+  /* Banner image styles */
+  .carte img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure image covers container */
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .carte {
+      flex-direction: column;
+      padding: 20px;
+    }
+  }
+  
+  /* Footer styles */
+  .footer-container {
+    background-color: #282d32; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 30px 20px;
+  }
+  
+  .container-media {
+    margin-left: 5%;
+  }
+  
+  .footer-dark {
+    padding: 50px 0;
+    color: #f0f9ff;
+    background-color: #282d32;
+  }
+  
+  .footer-dark h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .footer-dark ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity: 0.15;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-dark .item:not(.social) {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom: 36px;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-dark .item.text {
+      margin-bottom: 0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+  }
+  
+  .footer-dark .item.social {
+    text-align: center;
+  }
+  
+  @media (max-width: 991px) {
+    .footer-dark .item.social {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  
+  .footer-dark .copyright {
+    text-align: center;
+    padding-top: 24px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+  
+  /* Additional styles for review slider */
+  .avis-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+  }
+  
+  .avis-card {
+    flex: 0 0 auto;
+    width: 90%; /* Adjusted for responsiveness */
+    max-width: 300px; /* Maximum width for large screens */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .avis-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .avis-image {
+    width: 100%;
+    height: 200px; /* Fixed height for better control */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .avis-content {
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .avis-card {
+      width: 80%; /* Adjusted for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .avis-card {
+      width: 95%; /* Adjusted for small screens */
+    }
+  
+    .avis-content {
+      padding: 10px; /* Adjusted padding for smaller screens */
+    }
+  }
+  
+  /* Table styles for veterinary report */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  img {
+    width: 100px; /* Fixed width for images */
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Keeps the header on top of other content when scrolling */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Responsive adjustments for tables */
+  @media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block; /* Makes table elements behave like block elements */
+    }
+  
+    thead tr {
+      position: absolute; /* Positions the header out of view */
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    tr {
+      border: 1px solid #ccc; /* Adds border around each row */
+    }
+  
+    td {
+      border: none;
+      position: relative;
+      padding-left: 50%; /* Creates space for data */
+      text-align: right; /* Aligns text to the right */
+    }
+  
+    td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+  
+  /* Base styles for forms */
+  form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive adjustments for small screens */
+  @media (max-width: 600px) {
+    form {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    input, textarea, button {
+      font-size: 16px; /* Larger text size for readability */
+    }
+  }
+  
+  /* Additional styles for index page card section */
+  .button2 {
+    background-color: #4CAF50; /* Green background color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  .button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .navbar-brand img {
+    width: auto;
+    height: 50px; /* Adjust size as needed */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-brand img {
+      height: 30px;
+    }
+  }
+  
+  /* Additional styles */
+  .animal-image {
+    display: none;
+    position: absolute;
+    z-index: 100;
+  }
+  
+  .animal-name {
+    cursor: pointer;
+  }
+  

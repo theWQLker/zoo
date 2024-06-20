@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Site du zoo Arcadia">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parc zoologique Arcadia</title>
+  <link rel="stylesheet" href="liste\style2.css">
+</head>
+<body>
+  <div class="main-content">
+    <header class="header-container">
+      <a class="navbar-brand" href="/">
+        <img src="images/ide-verte.png" alt="Logo Zoo Arcadia" class="rounded-logo">
+      </a>
+      <h1>Bienvenue au Zoo Arcadia</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/habitat">Habitats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/service">Service & Horaires</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/submit_avis">Soumettre un avis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/rapport">Rapport vétérinaire</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="habitat-section">
+      <h2>Nos habitats</h2>
+      <p>Voici la liste de nos habitats et les animaux qui y vivent.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Animaux</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop through habitats and animals -->
+          <tr>
+            <td>Nom de l'habitat</td>
+            <td>Description de l'habitat</td>
+            <td>
+              <ul>
+                <li>Nom de l'animal - Race de l'animal - Clics : <span>0</span></li>
+                <!-- Example dynamic content -->
+              </ul>
+            </td>
+            <td>
+              <img src="path_to_image.jpg" alt="Image de l'habitat">
+            </td>
+          </tr>
+          <!-- End loop -->
+        </tbody>
+      </table>
+    </section>
+    <footer class="footer-container">
+      <div class="container-media">
+        <div class="row">
+          <div class="col-md-3 item">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Cafétéria</a></li>
+              <li><a href="#">Hôtel</a></li>
+              <li><a href="#">Transport</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 item">
+            <h3>A propos</h3>
+            <ul>
+              <li><a href="#">Vétérinaire</a></li>
+              <li><a href="#">Nos équipes</a></li>
+              <li><a href="#">Nos animaux</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 item text">
+            <h3>Zoo Arcadia</h3>
+            <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="social-icons">
+        <a class="facebook" href="https://www.facebook.com/votrepagefacebook" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a class="instagram" href="https://www.instagram.com/votrepageinstagram" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p class="copyright">Zoo Arcadia ©2024</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
