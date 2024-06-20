@@ -71,7 +71,7 @@
         <h2>Nos habitats</h2>
         <p>Voici la liste de nos habitats et les animaux qui y vivent. cliquez sur votre animal favori, survoler le
           prénom pour voirb son image.</p>
-        <table>
+        <!-- <table>
           <thead>
             <tr>
               <th>Nom</th>
@@ -94,7 +94,7 @@
                          onmouseout="hideImage(this)" onclick="incrementClick({{ animal.id }})"> 
                             {{ animal.prenom }}- {{ animal.race.label }} - Clics : <span id="clicks-count-{{ animal.id }}">{{ animal.clics }}</span>
                         </span> -->
-                    <div class="animal-image" style="display: none;">
+                    <!-- <div class="animal-image" style="display: none;">
                       <img src="{{ animal.image.url }}" alt="Image de {{ animal.prenom }}"
                         style="max-width: 350px; height: auto;">
                     </div>
@@ -115,6 +115,322 @@
               </td>
             </tr>
             {% endfor %}
+          </tbody>
+        </table> --> -->
+        <table>
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Description</th>
+              <th>Animaux</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Forêt Tropicale</td>
+              <td>Une forêt dense et humide.</td>
+              <td>
+                <ul>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(1)">
+                      Tigre - Panthera tigris - Clics : <span id="clicks-count-1">10</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/tiger.jpg" alt="Image de Tigre" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(2)">
+                      Singe - Macaca - Clics : <span id="clicks-count-2">15</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/monkey.jpg" alt="Image de Singe" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/forest.jpg" alt="Image de Forêt Tropicale"
+                  style="width: 100%; max-width: 700px; height: auto;" />
+              </td>
+            </tr>
+            <tr>
+              <td>Savane</td>
+              <td>Une vaste plaine herbeuse.</td>
+              <td>
+                <ul>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(3)">
+                      Lion - Panthera leo - Clics : <span id="clicks-count-3">20</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/lion.jpg" alt="Image de Lion" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(4)">
+                      Éléphant - Loxodonta - Clics : <span id="clicks-count-4">25</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/elephant.jpg" alt="Image de Éléphant"
+                        style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/savannah.jpg" alt="Image de Savane"
+                  style="width: 100%; max-width: 700px; height: auto;" />
+              </td>
+            </tr>
+            <tr>
+              <td>Forêt Tropicale</td>
+              <td>Une forêt dense et humide.</td>
+              <td>
+                <ul>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(1)">
+                      Tigre - Panthera tigris - Clics : <span id="clicks-count-1">10</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/tiger.jpg" alt="Image de Tigre" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(2)">
+                      Singe - Macaca - Clics : <span id="clicks-count-2">15</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/monkey.jpg" alt="Image de Singe" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/forest.jpg" alt="Image de Forêt Tropicale"
+                  style="width: 100%; max-width: 700px; height: auto;" />
+              </td>
+            </tr>
+            <tr>
+              <td>Savane</td>
+              <td>Une vaste plaine herbeuse.</td>
+              <td>
+                <ul>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(3)">
+                      Lion - Panthera leo - Clics : <span id="clicks-count-3">20</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/lion.jpg" alt="Image de Lion" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(4)">
+                      Éléphant - Loxodonta - Clics : <span id="clicks-count-4">25</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/elephant.jpg" alt="Image de Éléphant"
+                        style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/savannah.jpg" alt="Image de Savane"
+                  style="width: 100%; max-width: 700px; height: auto;" />
+              </td>
+            </tr>
+            <tr>
+              <td>Forêt Tropicale</td>
+              <td>Une forêt dense et humide.</td>
+              <td>
+                <ul>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(1)">
+                      Tigre - Panthera tigris - Clics : <span id="clicks-count-1">10</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/tiger.jpg" alt="Image de Tigre" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(2)">
+                      Singe - Macaca - Clics : <span id="clicks-count-2">15</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/monkey.jpg" alt="Image de Singe" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/forest.jpg" alt="Image de Forêt Tropicale"
+                  style="width: 100%; max-width: 700px; height: auto;" />
+              </td>
+            </tr>
+            <tr>
+              <td>Savane</td>
+              <td>Une vaste plaine herbeuse.</td>
+              <td>
+                <ul>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(3)">
+                      Lion - Panthera leo - Clics : <span id="clicks-count-3">20</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/lion.jpg" alt="Image de Lion" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(4)">
+                      Éléphant - Loxodonta - Clics : <span id="clicks-count-4">25</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/elephant.jpg" alt="Image de Éléphant"
+                        style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/savannah.jpg" alt="Image de Savane"
+                  style="width: 100%; max-width: 700px; height: auto;" />
+              </td>
+            </tr>
+            <tr>
+              <td>Forêt Tropicale</td>
+              <td>Une forêt dense et humide.</td>
+              <td>
+                <ul>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(1)">
+                      Tigre - Panthera tigris - Clics : <span id="clicks-count-1">10</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/tiger.jpg" alt="Image de Tigre" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(2)">
+                      Singe - Macaca - Clics : <span id="clicks-count-2">15</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/monkey.jpg" alt="Image de Singe" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/forest.jpg" alt="Image de Forêt Tropicale"
+                  style="width: 100%; max-width: 700px; height: auto;" />
+              </td>
+            </tr>
+            <tr>
+              <td>Savane</td>
+              <td>Une vaste plaine herbeuse.</td>
+              <td>
+                <ul>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(3)">
+                      Lion - Panthera leo - Clics : <span id="clicks-count-3">20</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/lion.jpg" alt="Image de Lion" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(4)">
+                      Éléphant - Loxodonta - Clics : <span id="clicks-count-4">25</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/elephant.jpg" alt="Image de Éléphant"
+                        style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/savannah.jpg" alt="Image de Savane"
+                  style="width: 100%; max-width: 700px; height: auto;" />
+              </td>
+            </tr>            <tr>
+              <td>Forêt Tropicale</td>
+              <td>Une forêt dense et humide.</td>
+              <td>
+                <ul>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(1)">
+                      Tigre - Panthera tigris - Clics : <span id="clicks-count-1">10</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/tiger.jpg" alt="Image de Tigre" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(2)">
+                      Singe - Macaca - Clics : <span id="clicks-count-2">15</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/monkey.jpg" alt="Image de Singe" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/forest.jpg" alt="Image de Forêt Tropicale"
+                  style="width: 100%; max-width: 700px; height: auto;" />
+              </td>
+            </tr>
+            <tr>
+              <td>Savane</td>
+              <td>Une vaste plaine herbeuse.</td>
+              <td>
+                <ul>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(3)">
+                      Lion - Panthera leo - Clics : <span id="clicks-count-3">20</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/lion.jpg" alt="Image de Lion" style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                  <li>
+                    <span class="animal-name" onmouseover="showImage(this)" onmouseout="hideImage(this)"
+                      onclick="incrementClick(4)">
+                      Éléphant - Loxodonta - Clics : <span id="clicks-count-4">25</span>
+                    </span>
+                    <div class="animal-image" style="display: none;">
+                      <img src="images/elephant.jpg" alt="Image de Éléphant"
+                        style="max-width: 350px; height: auto;" />
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/savannah.jpg" alt="Image de Savane"
+                  style="width: 100%; max-width: 700px; height: auto;" />
+              </td>
+            </tr>
           </tbody>
         </table>
 
