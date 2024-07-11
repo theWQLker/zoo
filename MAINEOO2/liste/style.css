@@ -1,0 +1,697 @@
+/* 
+   contenu de la page
+*/
+/* styles.css */
+
+.navbar {
+  background-color: #ffffff;
+  /* Background color */
+  padding: 1rem;
+  /* Padding */
+  margin: 20px;
+  border-bottom: #080505;
+}
+
+
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .navbar .nav-link {
+    font-size: 1rem;
+    /* Adjust font size for smaller screens */
+  }
+}
+
+/* styles.css */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f7f7fa;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.rounded-logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  /* Rounded corners */
+  object-fit: cover;
+}
+
+.navbar {
+  flex-grow: 1;
+  padding-left: 5px;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar .nav-link {
+  color: #07db58;
+  /* Text color */
+  font-size: 1.5rem;
+  /* Font size */
+  padding: 0.7rem 1rem;
+  /* Padding */
+
+
+}
+
+.navbar .nav-link:hover {
+  color: #00b351;
+  /* Text color on hover */
+  border-bottom: 2px solid #00b351;
+  /* Border on hover */
+  border: 1px solid green;
+  border-radius: 10%;
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-link {
+    font-size: 1rem;
+    /* Adjust font size for smaller screens */
+  }
+}
+
+/* test a suprimer plsutard  */
+.breadcrumb {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+  margin-bottom: 70px;
+  text-align: left;
+}
+
+/* .main-content {
+    margin: 15px auto;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #a6e2c0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(12, 5, 5, 0.1);
+    
+  } */
+
+
+/* 
+      titre effet animation haut en bas 
+  */
+.main-content {
+  width: 100vw;
+  /* 100% of viewport width */
+  height: 100vh;
+  /* 100% of viewport height */
+  background-color: #ffffff;
+  box-sizing: border-box;
+  /* Optional: includes padding and border in the element's total width and height */
+  padding: 0;
+  /* Adjust padding as needed */
+  margin: 0;
+  /* Remove default margin */
+}
+
+.h1-container {
+  text-align: center;
+  animation-name: titel;
+  animation-duration: 0.2s;
+  padding-top: 35px;
+
+}
+
+@keyframes titel {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.h1 {
+  font-size: 20px;
+  padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.h2-container {
+  text-align: center;
+  font-size: large, 20px;
+
+}
+
+.h2-container h2 {
+  font-size: 18px;
+  /* Modifiez la taille de la police selon vos besoins */
+  color: #333;
+  /* Modifiez la couleur du texte selon vos besoins */
+  /* Ajoutez d'autres styles au besoin */
+  text-align: center;
+
+}
+
+.separator-line {
+  width: 100%;
+  height: 1px;
+  /* Épaisseur de la ligne de séparation */
+  background-color: #ccc;
+  /* Couleur de la ligne de séparation */
+  border: none;
+  /* Supprimer le bord de la ligne de séparation */
+  margin: 10px 0;
+  /* Marge au-dessus et en dessous de la ligne de séparation */
+}
+
+.h2-container h2 {
+  font-size: 25px;
+  /* Modifiez la taille de la police selon vos besoins */
+  color: #333;
+  /* Modifiez la couleur du texte selon vos besoins */
+  /* Ajoutez d'autres styles au besoin */
+  margin: 20px;
+  margin-bottom: 45px;
+  margin-top: 45px;
+}
+
+.separator-line {
+  width: 100%;
+  /* La largeur de la ligne de séparation prend toute la largeur disponible */
+  height: 3px;
+  /* Épaisseur de la ligne de séparation */
+  background-color: #080505;
+  /* Couleur de la ligne de séparation */
+  border: none;
+  /* Supprime la bordure par défaut */
+  margin: 10px 0;
+  /* Marge au-dessus et en dessous de la ligne de séparation */
+}
+
+/* 
+      banniere millieu de page 
+  */
+.carte img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .carte {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+/* or
+        object-fit: cover; */
+
+
+/* Adding a negative margin to move the image up */
+
+
+
+
+
+
+.texte {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  margin: 50px 0;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+
+
+
+
+
+/* 
+      pied de page
+  */
+
+.container-media {
+  margin-left: 5%;
+
+}
+
+
+
+
+.footer-dark {
+  padding: 50px 0;
+  color: #f0f9ff;
+  background-color: #282d32;
+}
+
+.footer-dark h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-dark ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
+
+}
+
+.footer-dark ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.6;
+
+}
+
+.footer-dark ul a:hover {
+  opacity: 0.15;
+}
+
+/* 
+      pied de page responsive
+  */
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom: 36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom: 0;
+  }
+
+
+}
+
+
+.footer-dark .item.text p {
+  opacity: 0.6;
+  margin-bottom: 0;
+
+}
+
+.footer-dark .item.social {
+  text-align: center;
+
+
+
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+
+.footer-dark .copyright {
+  text-align: center;
+  padding-top: 24px;
+  opacity: 0.3;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+/* css pour animation avis visibles */
+.avis-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
+}
+
+.avis-card {
+  flex: 0 0 auto;
+  width: 90%;
+  /* Ajusté pour la réactivité */
+  max-width: 300px;
+  /* Maximum width for large screens */
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: white;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease-in-out;
+}
+
+.avis-card:hover {
+  transform: scale(1.03);
+}
+
+.avis-image {
+  width: 100%;
+  height: 200px;
+  /* Fixe la hauteur pour un meilleur contrôle */
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.avis-content {
+  padding: 20px;
+}
+
+/* Media Queries pour le responcive */
+@media (max-width: 768px) {
+  .avis-card {
+    width: 80%;
+    /* large */
+  }
+}
+
+@media (max-width: 480px) {
+  .avis-card {
+    width: 95%;
+    /* plein */
+  }
+
+  .avis-content {
+    padding: 10px;
+    /* ajustement du padding */
+  }
+}
+
+
+
+/* tableau rapport veterinaire */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+img {
+  width: 50%;
+  /* Fixed width for images */
+  height: auto;
+  /* Border */
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /* Keeps the header on top of other content when scrolling */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1000px) {
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    /* Makes the table elements behave like block elements */
+  }
+
+  thead tr {
+    position: absolute;
+    /* Positions the header out of the view, not taking space */
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    /* Adds border around each row */
+  }
+
+  td {
+    /* Each cell is now a row on its own */
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    /* Gives room for data to be shown on the right */
+    text-align: right;
+    /* Aligns the text to the right */
+  }
+
+  td:before {
+    /*  */
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    /*  */
+    padding-left: 10px;
+    /* Padding for the label */
+    font-weight: bold;
+    text-align: left;
+    /* Aligns the label text to the left */
+  }
+}
+
+/* Styles de base pour le formulaire */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive design pour petits écrans */
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+    padding: 10px;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 16px;
+    /* Plus grande taille de texte pour facilité la lecture */
+  }
+}
+
+/*  texte formulaire */
+.form-background {
+  position: relative;
+  text-align: center;
+  /*  centré */
+}
+
+
+.navbar-brand img {
+  width: auto;
+  height: 50px;
+  /* Adjust the size as needed */
+}
+
+/* Ensure the logo resizes on smaller screens */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 30px;
+  }
+}
+
+
+.animal-image {
+  display: none;
+  position: absolute;
+  z-index: 100;
+}
+
+.animal-name {
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 0.1rem;
+
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  width: 870px;
+  flex-direction: column;
+  overflow: hidden;
+
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
+    }
+  }
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  /* filter: saturate(180%); */
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+  ;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+  }
+
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; /* 3:2 aspect ratio*/
+    }
+  }
+}
+
+.card__image--flowers {
+  background-image: url(https://unsplash.it/800/600?image=82);
+}
+
+.card__image--river {
+  background-image: url(https://unsplash.it/800/600?image=11);
+}
+
+.card__image--record {
+  background-image: url(https://unsplash.it/800/600?image=39);
+}
+
+.card__image--fence {
+  background-image: url(https://unsplash.it/800/600?image=59);
+}
+.card__image--ele {
+  background-image: url(../images/habitatele.jpg );
+}
+.card__image--gi {
+  background-image: url(../images/giraffe.jpg);
+}
+
+.card__image--train {
+    background-image: url(../images/train2.png);
+  }
+  
+
+
+.card__title {
+  color: #0a0000;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 50%;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
