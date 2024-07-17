@@ -1,0 +1,272 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #090a0a;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h1, h2 {
+    color: #006400;
+}
+
+table.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table.services-table th, table.services-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table.services-table th {
+    background-color: #006400;
+    color: white;
+}
+
+table.services-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.services-table tr:hover {
+    background-color: #ddd;
+}
+
+form.service-form, form[method="post"] {
+    background-color: #f0f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+form.service-form label, form[method="post"] label {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 10px;
+    color: #006400;
+}
+
+form.service-form input[type="text"], form.service-form select, form.service-form textarea,
+form[method="post"] input[type="text"], form[method="post"] select, form[method="post"] textarea {
+    width: calc(100% - 220px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form.service-form button, form[method="post"] button {
+    background-color: #006400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form.service-form button:hover, form[method="post"] button:hover {
+    background-color: #004d00;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #e41e24;
+}
+
+/* Header styles */
+.header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #006400;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #006400;
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #333;
+    padding: 20px 20px;
+    font-size: 18px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    background-color: #f0f5f5;
+    border-radius: 5px;
+}
+
+.nav-bar .special-button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.nav-bar .special-button.mobile-outline {
+    border: 2px solid #006400;
+    color: #006400;
+}
+
+.nav-bar .special-button:not(.mobile-outline):hover {
+    background-color: #004d00;
+}
+
+.separator {
+    display: block; /* Ensure separator is visible by default */
+    border-left: 1px solid #ddd;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Burger icon and mobile menu */
+.burger-container {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        z-index: 1;
+        width: 100%;
+    }
+
+    .nav-bar.open {
+        display: flex;
+    }
+
+    .nav-bar a {
+        display: block;
+        padding: 10px 20px;
+    }
+
+    .burger-container {
+        display: block;
+        margin-left: auto;
+    }
+
+    .burger-icon {
+        display: block;
+        width: 30px;
+        height: 25px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .burger-icon .bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        margin: 6px auto;
+        transition: background-color 0.3s ease;
+    }
+
+    .burger-icon.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-icon.open .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger-icon.open .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .separator {
+        display: none; /* Hide separator in burger mode */
+    }
+
+    .nav-bar .special-button {
+        margin-left: 20px;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 2px solid #006400;
+    }
+
+    .nav-bar .special-button:not(.mobile-outline):hover {
+        background-color: transparent;
+    }
+}
+
+a {
+    color: #006400;
+    text-decoration: none;
+}

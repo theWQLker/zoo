@@ -1,0 +1,199 @@
+a {
+    color: #006400;
+    text-decoration: none;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h1, h2 {
+    color: #006400;
+}
+
+table.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table.services-table th, table.services-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table.services-table th {
+    background-color: #006400;
+    color: white;
+}
+
+table.services-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.services-table tr:hover {
+    background-color: #ddd;
+}
+
+form.service-form, form[method="post"] {
+    background-color: #f0f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+form.service-form label, form[method="post"] label {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 10px;
+    color: #006400;
+}
+
+form.service-form input[type="text"], form.service-form select, form.service-form textarea,
+form[method="post"] input[type="text"], form[method="post"] select, form[method="post"] textarea {
+    width: calc(100% - 220px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form.service-form button, form[method="post"] button {
+    background-color: #006400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form.service-form button:hover, form[method="post"] button:hover {
+    background-color: #004d00;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #e41e24;
+}
+
+/* Style for the header */
+.header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #006400;
+}
+
+/* Style for the logo section in the header */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the logo image */
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Style for the logo text, ensure no underline and correct color */
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #006400;
+    text-decoration: none;  /* Ensure no underline for logo text */
+}
+
+/* Style for the navigation bar */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the links in the navigation bar */
+.nav-bar a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 18px;
+    position: relative;  /* Added for underline effect */
+}
+
+.nav-bar a {
+    border-bottom: 2px solid #006400;  /* Underline color */
+}
+
+/* Add underline directly to the text */
+.nav-bar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #006400;
+    left: 0;
+    bottom: -2px;  /* Position the underline directly under the text */
+}
+
+/* Style for the special "Employés" button in the navigation bar */
+.nav-bar .special-button {
+    margin-left: 20px;
+    background-color: #006400;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for the special "Employés" button */
+.nav-bar .special-button:hover {
+    background-color: #004d00;
+}
+
+/* Style for the separator before the "Employés" button */
+.nav-bar .separator {
+    border-left: 1px solid #ddd;  /* Almost invisible vertical separator */
+    height: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

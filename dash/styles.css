@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h1, h2 {
+    color: #006400;
+}
+
+table.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table.services-table th, table.services-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table.services-table th {
+    background-color: #006400;
+    color: white;
+}
+
+table.services-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.services-table tr:hover {
+    background-color: #ddd;
+}
+
+form.service-form, form[method="post"] {
+    background-color: #f0f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+form.service-form label, form[method="post"] label {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 10px;
+    color: #006400;
+}
+
+form.service-form input[type="text"], form.service-form select, form.service-form textarea,
+form[method="post"] input[type="text"], form[method="post"] select, form[method="post"] textarea {
+    width: calc(100% - 220px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form.service-form button, form[method="post"] button {
+    background-color: #006400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form.service-form button:hover, form[method="post"] button:hover {
+    background-color: #004d00;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #e41e24;
+}
+
+
+a {
+    color: #006400;
+    text-decoration: none;
+}
