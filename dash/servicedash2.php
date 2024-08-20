@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'header.php';
+include 'head.php';
 include 'config.php';
 
 // Handle Add, Update, Delete operations

@@ -1,0 +1,74 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #d2b48c; /* Brownish-green background color */
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+    max-width: 1200px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.card_hb {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #888; /* Darker border color */
+    border-radius: 5px;
+    background-color: #fff; /* White background for cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for cards */
+}
+
+.card_hb img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-body_hb {
+    text-align: center;
+    flex-grow: 1;
+    padding: 15px;
+}
+
+.habitat-title_hb {
+    margin-top: 30px;
+}
+
+.card-deck_hb {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.card-deck_hb .card_hb {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust to ensure 3 cards per row with some margin */
+    margin: 10px;
+    max-width: calc(33.333% - 20px); /* Adjust to ensure 3 cards per row with some margin */
+}
+
+@media (max-width: 768px) {
+    .card-deck_hb .card_hb {
+        flex: 1 1 calc(50% - 20px); /* Adjust to ensure 2 cards per row with some margin */
+        max-width: calc(50% - 20px); /* Adjust to ensure 2 cards per row with some margin */
+    }
+}
+
+@media (max-width: 576px) {
+    .card-deck_hb .card_hb {
+        flex: 1 1 calc(100% - 20px); /* Full width for small screens */
+        max-width: calc(100% - 20px); /* Full width for small screens */
+    }
+}

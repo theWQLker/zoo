@@ -1,10 +1,9 @@
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #090a0a;
+    /* background-color: #44b376; */
     color: #333;
     margin: 0;
-    padding: 20px;
 }
 
 
@@ -215,6 +214,7 @@ form.service-form button:hover, form[method="post"] button:hover {
     .nav-bar a {
         display: block;
         padding: 10px 20px;
+        font-size: 12px;
     }
 
     .burger-container {

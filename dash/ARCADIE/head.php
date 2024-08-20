@@ -10,14 +10,15 @@
 
 <body>
     <header class="header">
-        <a href="head.php" class="logo">
-            <img src="images\ide-verte.png" alt="Zoo Logo">
+        <a href="home.php" class="logo">
+            <img src="ide-verte.png" alt="Zoo Logo">
             <span class="logo-text">Zoo Arcadia</span>
         </a>
         <nav class="nav-bar">
             <a href="services.php"><u>Services</u></a>
             <a href="haby.php"><u>Habitats</u></a>
             <a href="reservations.php"><u>Infos et Réservations</u></a>
+            <a href="#"><u>Contactez Nous</u></a>
             <div class="separator"></div>
             <a href="employees.php" class="nav-link special-button">Employés</a>
         </nav>

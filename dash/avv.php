@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'config.php';
+require 'head.php';
 
 // Handle admin login
 if (isset($_POST['login'])) {
@@ -56,57 +57,7 @@ if (isset($_SESSION['logged_in']) && ($_SESSION['role_type'] === 'admin' || $_SE
     <meta charset="UTF-8">
     <title>Zoo Reviews</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f5f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
 
-        .container {
-            width: 80%;
-            max-width: 800px; /* Adjust max-width as needed */
-            margin-top: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: left;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .disconnect-button {
-            background-color: #f44336;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            display: none; /* Initially hidden */
-        }
-
-        .disconnect-button:hover {
-            background-color: #e41e24;
-        }
-    </style>
 </head>
 <body>
     <div class="container">

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+body {
+    background-color: #e0f7fa;
+    color: #333;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+h1.chewy {
+    font-family: 'Chewy', cursive;
+}
+
+h1.fredericka {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+p.cabin-sketch {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+h1.amatic {
+    font-family: 'Amatic SC', cursive;
+}
+
+p.rock-salt {
+    font-family: 'Rock Salt', cursive;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section {
+    margin-bottom: 20px;
+}

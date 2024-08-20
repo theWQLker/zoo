@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+}
+
+.image-gallery, .upload-form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.image-gallery h2, .upload-form h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: black;
+    
+}
+
+.thumbnail {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.upload-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.upload-form input[type="text"], .upload-form input[type="file"], .upload-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.upload-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-form input[type="submit"]:hover {
+    background-color: #45a049;
+}

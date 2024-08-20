@@ -1,7 +1,7 @@
 <?php
 session_start();
  require 'config.php';
- include 'header.php';
+ include 'head.php';
 
 // Handle admin login
 if (isset($_POST['login'])) {

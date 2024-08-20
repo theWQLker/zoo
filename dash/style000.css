@@ -157,7 +157,7 @@ a {
 .nav-bar a {
     text-decoration: none;
     color: #333;
-    padding: 20px 20px;
+    padding: 0px 60px;
     font-size: 18px;
     border-bottom: 2px solid transparent;  /* Initial underline for menu items */
     transition: border-color 0.3s ease; /* Smooth transition for underline */

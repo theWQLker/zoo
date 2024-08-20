@@ -1,5 +1,6 @@
 <?php
 include 'config.php';
+include 'head.php';
 
 // Handle Add, Update, Delete operations
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

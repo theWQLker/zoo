@@ -1,0 +1,51 @@
+.card_hb {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    box-shadow: 0 0 10px #333;
+}
+
+.card_hb img {
+    width: 100%;
+    height: 40%;
+    object-fit: fill; /* Ensure images are resized without being cropped */
+}
+
+.card-body_hb {
+    text-align: center;
+    flex-grow: 1;
+    
+    
+}
+
+.habitat-title_hb {
+    margin-top: 30px;
+}
+
+.card-deck_hb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.card-deck_hb .card_hb {
+    flex: 1 1 calc(33.333% - 10px); /* Adjust to ensure 3 cards per row with some margin */
+    margin: 5px;
+    max-width: calc(33.333% - 10px); /* Adjust to ensure 3 cards per row with some margin */
+}
+
+@media (max-width: 768px) {
+    .card-deck_hb .card_hb {
+        flex: 1 1 calc(50% - 10px); /* Adjust to ensure 2 cards per row with some margin */
+        max-width: calc(50% - 10px); /* Adjust to ensure 2 cards per row with some margin */
+    }
+}
+
+@media (max-width: 576px) {
+    .card-deck_hb .card_hb {
+        flex: 1 1 100%; /* Full width for small screens */
+        max-width: 100%; /* Full width for small screens */
+    }
+}
