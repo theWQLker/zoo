@@ -4,12 +4,8 @@ body {
     /* background-color: #44b376; */
     color: #333;
     margin: 0;
-    background-image:url('./abstract-2684425_1920.jpg');
 }
 
-background {
-    
-}
 
 .container {
     width: 80%;
@@ -19,7 +15,6 @@ background {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    background-image:url('./abstract-2684425_1920.jpg');
 }
 
 h1, h2 {
@@ -53,7 +48,7 @@ table.services-table tr:hover {
 
 form.service-form, form[method="post"] {
     background-color: #f0f5f5;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;

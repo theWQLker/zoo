@@ -1,6 +1,4 @@
-<?php
-include("head.php"); // Database configuration
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +10,10 @@ include("head.php"); // Database configuration
     <link rel="stylesheet" href="ric2.css">
 </head>
 
-<body>
+<body background="./abstract-2684425_1920.jpg">
+<?php
+include("head.php"); // Database configuration
+?>
     <!-- Navbar
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,11 +40,11 @@ include("head.php"); // Database configuration
     </nav> -->
 
     <!-- Hero Section -->
-    <section class="hero text-center text-light d-flex align-items-center justify-content-center">
+    <section class="hero back text-center text-light d-flex align-items-center justify-content-center">
         <div class="hero-content">
             <h1 class="display-4">Welcome to Our Zoo</h1>
-            <p class="lead">Discover a world of animals, nature, and adventure!</p>
-            <a href="haby.php" class="btn btn-primary btn-lg mt-3">Explore Our Animals</a>
+            <p class="lead text-dark" >Discover a world of animals, nature, and adventure!</p>
+            <a href="haby.php" class="btn btn-success btn-lg mt-3">Explore Our Animals</a>
         </div>
     </section>
 
@@ -94,8 +95,8 @@ include("head.php"); // Database configuration
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-3">
-        <div class="container text-center">
+    <footer class=" text-dark py-3">
+        <div class=" text-center">
             <p>&copy; 2024 Our Zoo. All Rights Reserved.</p>
         </div>
     </footer>
