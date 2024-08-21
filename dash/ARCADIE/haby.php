@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+include("head.php"); // inclusion du header
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoo Animals</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="ric2.css">
+
+
     <style>
+        .back {
+            background-image:url('./abstract-2684425_1920.jpg');
+        }
+
         .card_hb {
             margin: 10px;
             display: flex;
             flex-direction: column;
             border: 1px solid #ddd;
             border-radius: 5px;
+            background-color: #fff;
         }
 
         .card_hb img {
@@ -30,6 +40,9 @@
 
         .habitat-title_hb {
             margin-top: 30px;
+            color:#ddf;
+            font-size: 40px;
+            font-weight: bold;
         }
 
         .habitat-image {
@@ -46,6 +59,7 @@
             flex-wrap: wrap;
             margin-left: -10px;
             margin-right: -10px;
+        
         }
 
         .card-deck_hb .card_hb {
@@ -91,9 +105,8 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container back" style="padding-left: 25px;">
         <?php
-        include("head.php");
         include 'config2.php'; // Include the database configuration file
 
         try {
@@ -117,7 +130,7 @@
                     // Start a new habitat section
                     echo '<div class="row habitat-title_hb">';
                     echo '<div class="col-12">';
-                    echo '<h2 class="text-center">' . htmlspecialchars($row["habitat"]) . '</h2>';
+                    echo '<p class="text-center">' . htmlspecialchars($row["habitat"]) . '</p>';
                     if (!empty($row['habitat_image'])) {
                         echo '<div class="text-center"><img src="data:image/jpeg;base64,' . base64_encode($row['habitat_image']) . '" alt="' . htmlspecialchars($row["habitat"]) . ' Habitat" class="habitat-image" /></div>';
                     }

@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // Fetch Services and Categories
-$query = "SELECT s.id, c.name, c.id AS category_name, s.name, s.description, s.price, s.availability_schedule
+$query = "SELECT s.id, c.name AS category_name, s.name, s.description, s.price, s.availability_schedule
           FROM services s
           JOIN service_categories c ON s.category_id = c.id";
 $stmt = $pdo->query($query);
@@ -69,10 +69,7 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <th>Availability Schedule</th>
                 <th>Actions</th>
             </tr>
-            <?php foreach ($services as $service) : 
-                // echo var_dump($service) 
-                ?>
-                
+            <?php foreach ($services as $service) : ?>
                 <tr>
                     <td><?php echo htmlspecialchars($service['id']); ?></td>
                     <td><?php echo htmlspecialchars($service['category_name']); ?></td>
@@ -81,10 +78,10 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo htmlspecialchars($service['price']); ?></td>
                     <td><?php echo htmlspecialchars($service['availability_schedule']); ?></td>
                     <td>
-                        <form method="post" style="">
+                        <form method="post">
                             <input type="hidden" name="id" value="<?php echo htmlspecialchars($service['id']); ?>">
+                            <input type="hidden" name="category_id" value="<?php echo htmlspecialchars($service['name']); ?>">
                             <input type="hidden" name="name" value="<?php echo htmlspecialchars($service['name']); ?>">
-                            <input type="hidden" name="category_id" value="<?php echo htmlspecialchars($service['id']); ?>"> 
                             <input type="hidden" name="description" value="<?php echo htmlspecialchars($service['description']); ?>">
                             <input type="hidden" name="price" value="<?php echo htmlspecialchars($service['price']); ?>">
                             <input type="hidden" name="availability_schedule" value="<?php echo htmlspecialchars($service['availability_schedule']); ?>">
@@ -101,6 +98,7 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php if (isset($_POST['edit_service_form'])) : ?>
                 <input type="hidden" name="id" value="<?php echo htmlspecialchars($_POST['id']); ?>">
             <?php endif; ?>
+
             <label for="category_id">Category:</label>
             <select id="category_id" name="category_id" required>
                 <?php foreach ($categories as $category) : ?>

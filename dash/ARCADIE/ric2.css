@@ -4,8 +4,12 @@ body {
     /* background-color: #44b376; */
     color: #333;
     margin: 0;
+    background-image:url('./abstract-2684425_1920.jpg');
 }
 
+background {
+    
+}
 
 .container {
     width: 80%;
@@ -15,6 +19,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    background-image:url('./abstract-2684425_1920.jpg');
 }
 
 h1, h2 {

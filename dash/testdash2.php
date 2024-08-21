@@ -5,26 +5,24 @@ include 'head.php';
 // Handle Add, Update, Delete operations
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['add_service'])) {
-        $category_id = $_POST['category_id'];
         $name = $_POST['name'];
         $description = $_POST['description'];
         $price = $_POST['price'];
         $availability_schedule = $_POST['availability_schedule'];
 
-        $query = "INSERT INTO services (category_id, name, description, price, availability_schedule) VALUES (?, ?, ?, ?, ?)";
+        $query = "INSERT INTO services (name, description, price, availability_schedule) VALUES (?, ?, ?, ?)";
         $stmt = $pdo->prepare($query);
-        $stmt->execute([$category_id, $name, $description, $price, $availability_schedule]);
+        $stmt->execute([$name, $description, $price, $availability_schedule]);
     } elseif (isset($_POST['edit_service'])) {
         $id = $_POST['id'];
-        $category_id = $_POST['category_id'];
         $name = $_POST['name'];
         $description = $_POST['description'];
         $price = $_POST['price'];
         $availability_schedule = $_POST['availability_schedule'];
 
-        $query = "UPDATE services SET category_id = ?, name = ?, description = ?, price = ?, availability_schedule = ? WHERE id = ?";
+        $query = "UPDATE services SET name = ?, description = ?, price = ?, availability_schedule = ? WHERE id = ?";
         $stmt = $pdo->prepare($query);
-        $stmt->execute([$category_id, $name, $description, $price, $availability_schedule, $id]);
+        $stmt->execute([$name, $description, $price, $availability_schedule, $id]);
     } elseif (isset($_POST['delete_service'])) {
         $id = $_POST['id'];
 
@@ -34,16 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Fetch Services and Categories
-$query = "SELECT s.id, c.name, c.id AS category_name, s.name, s.description, s.price, s.availability_schedule
-          FROM services s
-          JOIN service_categories c ON s.category_id = c.id";
+// Fetch Services
+$query = "SELECT id, name, description, price, availability_schedule FROM services";
 $stmt = $pdo->query($query);
 $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-$query = "SELECT id, name FROM service_categories";
-$stmt = $pdo->query($query);
-$categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +43,7 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <head>
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 </head>
 
 <body>
@@ -61,34 +53,29 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <h2>Services</h2>
         <table class="services-table">
             <tr>
-                <th>ID</th>
-                <th>Category</th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Price</th>
                 <th>Availability Schedule</th>
                 <th>Actions</th>
             </tr>
-            <?php foreach ($services as $service) : 
-                // echo var_dump($service) 
-                ?>
-                
+            <?php foreach ($services as $service) : ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($service['id']); ?></td>
-                    <td><?php echo htmlspecialchars($service['category_name']); ?></td>
                     <td><?php echo htmlspecialchars($service['name']); ?></td>
                     <td><?php echo htmlspecialchars($service['description']); ?></td>
                     <td><?php echo htmlspecialchars($service['price']); ?></td>
                     <td><?php echo htmlspecialchars($service['availability_schedule']); ?></td>
                     <td>
-                        <form method="post" style="">
+                        <form method="post" style="display:inline;">
                             <input type="hidden" name="id" value="<?php echo htmlspecialchars($service['id']); ?>">
                             <input type="hidden" name="name" value="<?php echo htmlspecialchars($service['name']); ?>">
-                            <input type="hidden" name="category_id" value="<?php echo htmlspecialchars($service['id']); ?>"> 
                             <input type="hidden" name="description" value="<?php echo htmlspecialchars($service['description']); ?>">
                             <input type="hidden" name="price" value="<?php echo htmlspecialchars($service['price']); ?>">
                             <input type="hidden" name="availability_schedule" value="<?php echo htmlspecialchars($service['availability_schedule']); ?>">
                             <button type="submit" name="edit_service_form" class="edit-button">Edit</button>
+                        </form>
+                        <form method="post" style="display:inline-block;">
+                            <input type="hidden" name="id" value="<?php echo htmlspecialchars($service['id']); ?>">
                             <button type="submit" name="delete_service" class="delete-button">Delete</button>
                         </form>
                     </td>
@@ -101,14 +88,6 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php if (isset($_POST['edit_service_form'])) : ?>
                 <input type="hidden" name="id" value="<?php echo htmlspecialchars($_POST['id']); ?>">
             <?php endif; ?>
-            <label for="category_id">Category:</label>
-            <select id="category_id" name="category_id" required>
-                <?php foreach ($categories as $category) : ?>
-                    <option value="<?php echo htmlspecialchars($category['id']); ?>" <?php echo (isset($_POST['category_id']) && $_POST['category_id'] == $category['id']) ? 'selected' : ''; ?>>
-                        <?php echo htmlspecialchars($category['name']); ?>
-                    </option>
-                <?php endforeach; ?>
-            </select><br><br>
 
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="<?php echo isset($_POST['name']) ? htmlspecialchars($_POST['name']) : ''; ?>" required><br><br>
